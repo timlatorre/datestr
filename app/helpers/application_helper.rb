@@ -1,6 +1,7 @@
 module ApplicationHelper
   def show_dynamic_links
-    if @authenticated_user 
+    if @auth
+      "Welcome," @auth.name
       link_to "Logout", logout_path
     else
       link_to "Login", login_path

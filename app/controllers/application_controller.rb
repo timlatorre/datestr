@@ -3,12 +3,12 @@ class ApplicationController < ActionController::Base
 
   before_filter :authenticate_user
   private
-  
+
   def authenticate_user
     if session[:user_id]
-      @authenticated_user = User.find(session[:user_id])
+      @auth = User.find(session[:user_id])
     else
-      @authenticated_user = nil
+      @auth = nil
     end
   end
 end
