@@ -1,0 +1,44 @@
+= form_for @auth, :url => '/profile' do |f|
+
+  .field
+    = label_tag :username
+    = f.text_field :username
+
+  .field
+    = label_tag :tagline
+    = f.text_field :tagline
+
+  .field
+    = label_tag :age
+    = f.number_field :age
+
+  .field
+    = label_tag :gender
+    = f.text_field :gender
+
+  .field
+    = label_tag :city
+    = f.text_field :city
+
+  .field
+    = label_tag :state
+    = f.text_field :state
+
+  .field
+    = label_tag :ethnicity
+    = f.text_field :ethnicity
+
+  .field
+    = label_tag :description
+    = f.text_area :description
+
+  .field
+    = label_tag :password
+    = f.password_field :password
+
+  .field
+    = label_tag :password_confirmation
+    = f.password_field :password_confirmation
+
+  .field
+    = f.submit

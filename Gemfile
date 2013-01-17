@@ -20,6 +20,7 @@ end
 
 group :assets do
   gem 'sass-rails'
+  gem 'haml'
   gem 'coffee-rails'
   gem 'uglifier'
 end

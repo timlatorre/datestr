@@ -1,0 +1,13 @@
+#create_login
+  = form_tag do |f|
+    .field
+      = label_tag 'email'
+      = text_field_tag 'register[email]'
+    .field
+      = label_tag 'password'
+      = password_field_tag 'register[password]'
+    .field
+      = label_tag 'password_confirmation'
+      = password_field_tag 'register[password_confirmation]'
+    .field
+      = submit_tag 'Next'

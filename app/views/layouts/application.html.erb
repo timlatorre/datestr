@@ -9,7 +9,7 @@
 <body>
 	<header>Datestr</header>
 	<nav>
-		<%= "Welcome, #{@auth.name}" if @auth %>
+		<%= "Welcome, #{@auth.username}" if @auth && @auth.username != nil %>
 		<%= show_dynamic_links %>
 	</nav>
 <%= yield %>
