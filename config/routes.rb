@@ -1,8 +1,11 @@
 Datestr::Application.routes.draw do
 
-  get '/' => 'home#index'
+  root :to => 'home#index'
   get '/about' => 'home#about'
   get '/register' => 'users#new'
+
+  get '/profile' => 'users#show'
+  get '/profile/edit' => 'users#edit'
 
   get '/login' => 'session#new'
   post '/login' => 'session#create'

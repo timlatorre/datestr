@@ -9,14 +9,8 @@
 <body>
 	<header>Datestr</header>
 	<nav>
-		<%= "Welcome, #{@authenticated_user.name}" if @authenticated_user %>
+		<%= "Welcome, #{@auth.name}" if @auth %>
 		<%= show_dynamic_links %>
-		<%= link_to "Profile", user_path(@authenticated_user) if @authenticated_user %>
-		<%= link_to "(edit)", edit_user_path(@authenticated_user) if @authenticated_user %>
-		<%= link_to "Messages", messages_path(@authenticated_user) if @authenticated_user %>
-		<%= link_to "Browse", browse_path(@authenticated_user) if @authenticated_user %>
-		<%= link_to "New User", new_user_path if !@authenticated_user %>
-		<%= link_to "About", about_path if !@authenticated_user %>
 	</nav>
 <%= yield %>
 
