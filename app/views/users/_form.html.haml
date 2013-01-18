@@ -9,12 +9,18 @@
     = f.text_field :tagline
 
   .field
+    = f.radio_button(:gender, 'male')
+    = label_tag(:gender_label, 'Male')
+    = f.radio_button(:gender, 'female')
+    = label_tag(:gender_label, 'Female')
+
+  .field
     = label_tag :age
     = f.number_field :age
 
   .field
-    = label_tag :gender
-    = f.text_field :gender
+    = label_tag :ethnicity
+    = f.text_field :ethnicity
 
   .field
     = label_tag :city
@@ -25,12 +31,12 @@
     = f.text_field :state
 
   .field
-    = label_tag :ethnicity
-    = f.text_field :ethnicity
-
-  .field
     = label_tag :description
     = f.text_area :description
+
+  .field
+    = label_tag :email
+    = f.text_field :email
 
   .field
     = label_tag :password
