@@ -1,7 +1,14 @@
 .profile
-  .prof_main-photo
-  .prof_main-details
-    .prof_username Username
-    .prof_tagline This is my tagline!
-  .prof_details Male, 41, White
-  .prof_location Austin, TX
+  .profile_main-photo
+  .profile_main-details
+    .profile_username
+      = profile.username
+    .profile_tagline
+      = profile.tagline
+  .profile_details
+    = profile.gender
+    = profile.age
+    = profile.ethnicity
+  .profile_location
+    = profile.city
+    = profile.state
