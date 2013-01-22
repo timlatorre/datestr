@@ -11,3 +11,5 @@
  *= require_self
  *= require_tree .
  */
+
+.page_title { font-weight: bold; font-size: 20px; }

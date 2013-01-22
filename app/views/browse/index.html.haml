@@ -1,0 +1,24 @@
+= form_tag '/search', :method => :get do
+  .inline-field
+    = number_field_tag 'browse[age]'
+    = label_tag 'age'
+
+  .inline-field
+    = radio_button_tag 'browse[gender]', 'male'
+    = label_tag 'gender', 'Male'
+    = radio_button_tag 'browse[gender]', 'female'
+    = label_tag 'gender', 'Female'
+
+  .inline-field
+    = text_field_tag 'browse[state]'
+    = label_tag 'state'
+
+  .inline-field
+    = text_field_tag 'browse[ethnicity]'
+    = label_tag 'ethnicity'
+
+  .inline-field
+    = submit_tag 'Browse'
+
+  #results
+    = render :partial => 'results', :collection => @profiles, :as => :result if @profiles != nil

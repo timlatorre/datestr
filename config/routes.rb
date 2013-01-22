@@ -18,6 +18,7 @@ Datestr::Application.routes.draw do
   get '/messages' => 'messages#index'
 
   get '/browse' => 'browse#index'
+  get '/search' => 'browse#search'
 
 
 
