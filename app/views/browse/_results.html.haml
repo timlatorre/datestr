@@ -2,7 +2,7 @@
   .results_main-photo
   .results_main-details
     .results_username
-      = result.username
+      = link_to result.username, userprofile_path(result)
     .results_tagline
       = result.tagline
   .results_details

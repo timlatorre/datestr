@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_filter :ensure_logged_in
 
 	def index
 	end
@@ -24,4 +25,10 @@ class UsersController < ApplicationController
 
 	def edit
 	end
+
+  private
+  def ensure_logged_in
+    redirect_to root_path if @auth.nil?
+  end
+
 end

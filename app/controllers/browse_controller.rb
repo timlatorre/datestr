@@ -1,6 +1,5 @@
 class BrowseController < ApplicationController
 	def index
-    @profiles = nil
   end
 
   def search

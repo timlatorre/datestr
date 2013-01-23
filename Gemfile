@@ -4,6 +4,8 @@ gem 'rails'
 gem 'pg'
 gem 'bcrypt-ruby'
 gem 'jquery-rails'
+gem 'carrierwave'
+gem 'fog'
 
 group :development do
   gem 'annotate'

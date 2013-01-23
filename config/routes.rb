@@ -14,6 +14,7 @@ Datestr::Application.routes.draw do
   put '/profile' => 'users#update'
   get '/profile/edit' => 'users#edit'
   get '/profile/new' => 'users#new'
+  get '/profile/:id' => 'users#show', :as => 'userprofile'
 
   get '/messages' => 'messages#index'
 
