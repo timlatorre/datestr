@@ -1,0 +1,14 @@
+.page_title
+  Add Photo
+
+= form_for @photo do |f|
+  .field
+    = f.label :local
+    = f.file_field :filename
+
+  .field
+    = f.label :remote
+    = f.text_field :remote_filename_url
+
+  .field
+    = f.submit

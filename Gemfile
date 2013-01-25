@@ -6,6 +6,7 @@ gem 'bcrypt-ruby'
 gem 'jquery-rails'
 gem 'carrierwave'
 gem 'fog'
+gem 'rmagick'
 
 group :development do
   gem 'annotate'

@@ -16,11 +16,15 @@ Datestr::Application.routes.draw do
   get '/profile/new' => 'users#new'
   get '/profile/:id' => 'users#show', :as => 'userprofile'
 
+  get '/photos' => 'photos#index'
+  post '/photos' => 'photos#create'
+  get '/photos/new' => 'photos#new'
+  post '/photos/primary' => 'photos#primary'
+  get '/photos/:id' => 'photos#show', :as => 'photo'
+
   get '/messages' => 'messages#index'
 
   get '/browse' => 'browse#index'
   get '/search' => 'browse#search'
-
-
 
 end
