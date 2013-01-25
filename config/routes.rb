@@ -22,6 +22,11 @@ Datestr::Application.routes.draw do
   post '/photos/primary' => 'photos#primary'
   get '/photos/:id' => 'photos#show', :as => 'photo'
 
+  get '/questions' => 'questions#index'
+  get 'questions/new' => 'questions#new'
+  get 'questions/edit' => 'questions#edit'
+  get 'questions/:id' => 'questions#show'
+
   get '/messages' => 'messages#index'
 
   get '/browse' => 'browse#index'
