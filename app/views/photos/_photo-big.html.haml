@@ -1,0 +1,8 @@
+.photo
+  .image
+    = image_tag(photo.filename.url)
+
+  - if photo.in? @auth.photos
+    = form_tag '/photos/primary' do
+      = hidden_field_tag 'id', photo.id
+      = submit_tag 'Make Primary' if !photo.is_primary

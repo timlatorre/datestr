@@ -17,6 +17,17 @@ class PhotosController < ApplicationController
   end
 
   def primary
+    old = Photo.where(:is_primary => true).first
+    if old
+      old.is_primary = false
+      old.save
+    end
+
+    photo = Photo.find(params[:id])
+    photo.is_primary = true
+    photo.save
+
+    redirect_to photos_path
   end
 
   private
