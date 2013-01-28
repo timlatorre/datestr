@@ -1,0 +1,12 @@
+= form_for @question do |f|
+  .field
+    = label_tag :question
+    = f.text_field :question_text
+
+  #incorrect_answers
+
+  .field
+    %input{:type => 'button', :id => 'add_answer', :value => 'Add Answer'}
+
+  .field
+    = f.submit
