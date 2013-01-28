@@ -29,6 +29,10 @@ Datestr::Application.routes.draw do
   get 'questions/:id' => 'questions#show'
 
   get '/messages' => 'messages#index'
+  get '/messages/:id/new' => 'messages#new', :as => 'new_message'
+  post '/messages' => 'messages#create'
+  get '/messages/:id' => 'messages#show', :as => 'message'
+  post '/messages/answer' => 'messages#answer'
 
   get '/browse' => 'browse#index'
   get '/search' => 'browse#search'
