@@ -1,2 +1,4 @@
 .page_title
   Questions
+
+= render :partial => 'question', :collection => @auth.questions, :as => :question

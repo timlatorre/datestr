@@ -1,0 +1,10 @@
+.question
+  .question_text
+    = question.question_text
+
+  .answers
+    - question.answers.each do |answer|
+      = '*' if answer.is_correct
+      = answer.answer_text
+      %br
+
