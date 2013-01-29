@@ -1,1 +1,13 @@
-New Message
+.page_title
+  send message
+
+= form_for @message, :url => '/messages' do |f|
+  .field
+    To:
+    = @profile.username
+    %br
+    = hidden_field_tag 'message[receiver_id]', @profile.id
+    = f.text_area :message_text
+
+  .field
+    = f.submit

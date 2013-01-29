@@ -1,0 +1,15 @@
+.page_title
+  dealbreaker
+
+= form_tag '/messages/answer' do
+  .field
+    = label_tag @question.question_text
+    = hidden_field_tag 'question', @question.id
+
+    - @question.answers.each do |answer|
+      .field
+        = radio_button_tag 'answer', answer.id
+        = answer.answer_text
+
+  .field
+    = submit_tag 'Submit Answer'

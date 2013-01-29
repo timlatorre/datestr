@@ -1,0 +1,7 @@
+.message
+  .from
+    = link_to message.sender.username, userprofile_path(message.sender)
+  .sent
+    = link_to message.created_at.strftime('%B %d, %Y'), message_path(message)
+  .text
+    = message.message_text

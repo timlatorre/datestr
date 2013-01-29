@@ -1,0 +1,7 @@
+.page_title
+  Message
+
+= render :partial => 'message', :locals => {:message => @message}
+.clear
+
+= link_to 'Reply', new_message_path(@message.sender)
