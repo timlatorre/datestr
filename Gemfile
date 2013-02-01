@@ -26,6 +26,8 @@ group :assets do
   gem 'haml'
   gem 'coffee-rails'
   gem 'uglifier'
+  gem 'compass-rails'
+  gem 'zurb-foundation'
 end
 
 
