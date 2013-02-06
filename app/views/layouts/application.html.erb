@@ -13,7 +13,7 @@
 	<!-- Set the viewport width to device width for mobile -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+	<title><%= content_for?(:title) ? yield(:title) : "Datestr" %></title>
 
 	<!-- Included CSS Files -->
 	<%= stylesheet_link_tag    "application" %>
@@ -24,7 +24,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<%= show_dynamic_links %>
+	<div id="logo">datestr</div>
+	<nav>
+		<%= show_dynamic_links %>
+	</nav>
+
   <%= yield %>
+
 </body>
 </html>
