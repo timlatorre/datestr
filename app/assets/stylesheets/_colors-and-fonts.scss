@@ -1,6 +1,7 @@
 /*---------------  Colors  ---------------*/
 
-$background-main: white;
+$background-main: blue;
+$topbar: black;
 
 
 
@@ -11,4 +12,10 @@ $background-main: white;
 
 
 /*---------------  Fonts  ---------------*/
+@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville);
+@import url(http://fonts.googleapis.com/css?family=Sofia);
+@import url(http://fonts.googleapis.com/css?family=Rambla);
 
+$logo-font1: 'Libre Baskerville', serif;
+$logo-font2: 'Sofia', cursive;
+$logo-sans: 'Rambla', sans-serif;

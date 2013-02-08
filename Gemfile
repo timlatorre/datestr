@@ -22,7 +22,7 @@ group :development, :test do
 end
 
 group :assets do
-  gem 'sass-rails'
+  gem 'sass'
   gem 'haml'
   gem 'coffee-rails'
   gem 'uglifier'

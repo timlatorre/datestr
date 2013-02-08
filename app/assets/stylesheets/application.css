@@ -3,10 +3,5 @@
  *= require foundation_and_overrides
  *= require '_misc.scss'
  *= require '_colors-and-fonts.scss'
- *= require 'structure.scss'
- *= require 'style.scss'
+ *= require 'globals.scss'
  */
-
-.page_title { font-weight: bold; font-size: 20px; }
-
-.results_username { font-weight: bold; font-size: 16px; }

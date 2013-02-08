@@ -24,12 +24,56 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div id="logo">datestr</div>
-	<nav>
-		<%= show_dynamic_links %>
-	</nav>
+	<div id="top-bar"></div>
+	<div id="container">
+		<div class="twelve columns" id="logo-login">
+			<div id="logo" class="three columns">date<span id="str">str</span></div>
+			<div class="upper-bar nine columns">
+				<% if @auth && @auth.username != nil %>
+						<span id="greeting"><%= "Welcome, #{@auth.username}" %></span>
+			      <%= link_to("Logout", logout_path) %>
+			  <% else %>
+				    <%= link_to("Login", login_path)%>
+			      <%= link_to("Register", register_path) %>
+			      <%= link_to("About", about_path) %>
+			  <% end %>
+			</div>
 
-  <%= yield %>
+			<% if @auth != nil %>
+				<nav class="twelve columns">
+						<ul class="nav-bar">
 
+		      		<li class="has-flyout"><%= link_to("Profile", profile_path) %>
+		      			<a href="#" class="flyout-toggle"><span> </span></a>
+		      			<ul class="flyout">
+		      				<li><%= link_to("Edit Profile", profile_edit_path) %></li>
+		      			</ul>
+		      		</li><!-- .has-flyout -->
+
+		      		<li class="has-flyout"><%= link_to("Photos", photos_path) %>
+		      			<a href="#" class="flyout-toggle"><span> </span></a>
+			      			<ul class="flyout">
+			      				<li><%= link_to("Add Photo", photos_new_path) %></li>
+			      			</ul>
+		      		</li><!-- .has-flyout -->
+
+				      <li class="has-flyout"><%= link_to("Questions", questions_path) %>
+		      			<a href="#" class="flyout-toggle"><span> </span></a>
+			      			<ul class="flyout">
+			      				<li><%= link_to("Add Question", questions_new_path) %></li>
+			      			</ul>
+		      		</li><!-- .has-flyout -->
+
+				      <li><%= link_to("Messages", messages_path) %></li>
+				      <li><%= link_to("Browse", browse_path) %></li>
+				    </ul>
+					</nav>
+			  <% end  %>
+			<div class="clear"></div>
+
+	  	<%= yield %>
+
+	</div><!-- .twelve.columns -->
+	</div><!-- #container -->
 </body>
 </html>
