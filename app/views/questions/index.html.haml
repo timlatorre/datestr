@@ -2,3 +2,5 @@
   Questions
 
 = render :partial => 'question', :collection => @auth.questions, :as => :question
+
+= link_to "Add Question", questions_new_path, :class => "button"

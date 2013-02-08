@@ -1,6 +1,7 @@
 .page_title
   Profile
+  = link_to 'Edit', profile_edit_path(@profile) if @auth = @profile
 
-= link_to 'send message', new_message_path(@profile) if @auth != @profile
+= link_to 'Contact', new_message_path(@profile) if @auth != @profile
 
 = render :partial => 'profile', :locals => {:profile => @profile}

@@ -1,7 +1,7 @@
 @import 'colors-and-fonts';
 
 /*---- Main ----*/
-body {  font-family: $logo-sans; }
+body {  font-family: $logo-sans; background-color: $bg-color; }
 #top-bar { width: 100%; height: 10px; background-color: $topbar; }
 #container { width: 920px; margin: 0 auto; }
 #logo-login { margin-top: 20px;}
@@ -9,9 +9,15 @@ body {  font-family: $logo-sans; }
 .upper-bar a, #greeting { margin-left: 10px; }
 
 /*---- Logo ----*/
-#logo { font-family: $logo-font1; font-size: 60px; letter-spacing: -3px; text-align: center; }
-#str { font-family: $logo-font2; font-size: 118%; margin-left: 3px; letter-spacing: 0; }
+#logo { font-family: $logo-font1; font-size: 60px; letter-spacing: -3px; text-align: center; color: $logo1; }
+#str { font-family: $logo-font2; font-size: 119%; margin-left: 3px; letter-spacing: 0; color: $logo2; }
 
 /*---- Nav -----*/
 nav { font-size: 20px; font-weight: bold;}
 
+/*---- Pages ---*/
+.page_title { margin: 10px 0 20px 0; font-size: 30px; font-weight: 700; }
+.page_title a { font-weight: 400; font-size:60%; }
+
+/*---- Profiles ---*/
+.line_head { font-weight: 700; }

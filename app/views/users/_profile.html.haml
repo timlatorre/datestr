@@ -6,11 +6,18 @@
     .profile_tagline
       = profile.tagline
   .profile_details
+    %span(class="line_head") Details:
     = profile.gender
     = profile.age
     = profile.ethnicity
   .profile_location
+    %span(class="line_head") Location:
     = profile.city
     = profile.state
   .profile_description
+    %span(class="line_head") About:
     = profile.description
+  .profile_photos
+    = link_to "Photos", photos_path, :class => "button"
+  .profile_questions
+    = link_to "Questions", questions_path, :class => "button"
