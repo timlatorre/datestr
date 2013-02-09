@@ -5,7 +5,7 @@ Photo.delete_all
 Question.delete_all
 User.delete_all
 
-u1 = User.create(:username => 'Johnny', :password => '123', :password_confirmation => '123', :email => 'johnny@depp.com', :tagline => "There's nothing like pirate booty!", :age => '49', :gender => 'Male', :city => 'Los Angeles', :state => 'CA', :ethnicity => 'white', :description => "I've been acting since I was twenty. Now I live in Europe. How cool is that?")
+u1 = User.create(:username => 'Johnny', :password => '123', :password_confirmation => '123', :email => 'johnny@depp.com', :tagline => "There's nothing like pirate booty!", :age => '49', :gender => 'male', :preference => 'women', :city => 'Los Angeles', :state => 'CA', :ethnicity => 'white', :description => "I've been acting since I was twenty. Now I live in Europe. How cool is that?")
 q1 = Question.create( :question_text => 'What is your favorite foreign language?')
 a1 = Answer.create(:answer_text => 'French', :is_correct => 't')
 a2 = Answer.create(:answer_text => 'Spanish', :is_correct => 'f')
@@ -19,7 +19,7 @@ a6 = Answer.create(:answer_text => 'Wilde', :is_correct => 'f')
 u1.questions << q2
 q2.answers = a4, a5, a6
 
-u2 = User.create(:username => 'Jon', :password => '123', :password_confirmation => '123', :email => 'jon@stewart.com', :tagline => "Here's your moment of zen.", :age => '50', :gender => 'Male', :city => 'New York', :state => 'NY', :ethnicity => 'white', :description => "I like making fun of politics. I make fun of a lot of things, but I would never make fun of you.")
+u2 = User.create(:username => 'Jon', :password => '123', :password_confirmation => '123', :email => 'jon@stewart.com', :tagline => "Here's your moment of zen.", :age => '50', :gender => 'male', :preference => 'women', :city => 'New York', :state => 'NY', :ethnicity => 'white', :description => "I like making fun of politics. I make fun of a lot of things, but I would never make fun of you.")
 q3 = Question.create( :question_text => 'Which of the following do you think was the better president?')
 a7 = Answer.create(:answer_text => 'Barack Obama', :is_correct => 't')
 a8 = Answer.create(:answer_text => 'Ronald Reagan', :is_correct => 'f')
@@ -33,7 +33,7 @@ a12 = Answer.create(:answer_text => '13th - Abolishment of Slavery', :is_correct
 u2.questions << q4
 q4.answers = a10, a11, a12
 
-u3 = User.create(:username => 'Olivia', :password => '123', :password_confirmation => '123', :email => 'olivia@munn.com', :tagline => "I'm hot and I'm smart", :age => '32', :gender => 'Female', :city => 'Los Angeles', :state => 'CA', :ethnicity => 'white', :description => "I can shoot a gun in a dress better than any man in pants. Now if he's wearing a dress, that might be a challenge. ")
+u3 = User.create(:username => 'Olivia', :password => '123', :password_confirmation => '123', :email => 'olivia@munn.com', :tagline => "I'm hot and I'm smart", :age => '32', :gender => 'female', :preference => 'men', :city => 'Los Angeles', :state => 'CA', :ethnicity => 'white', :description => "I can shoot a gun in a dress better than any man in pants. Now if he's wearing a dress, that might be a challenge. ")
 q5 = Question.create( :question_text => 'What was the most important technology event in human history?')
 a13 = Answer.create(:answer_text => 'Electricity and the Light Bulb', :is_correct => 't')
 a14 = Answer.create(:answer_text => 'Printing Press', :is_correct => 'f')
@@ -48,7 +48,7 @@ a19 = Answer.create(:answer_text => 'Kerfuffle', :is_correct => 'f')
 u3.questions << q6
 q6.answers = a17, a18, a19
 
-u4 = User.create(:username => 'Zooey', :password => '123', :password_confirmation => '123', :email => 'zooey@deschanel.com', :tagline => "I like colors and flowers.", :age => '33', :gender => 'Female', :city => 'Los Angeles', :state => 'CA', :ethnicity => 'white', :description => "I'm an actress, but not an airhead. I'm a vegan, but won't force you to be one. I like word games.")
+u4 = User.create(:username => 'Zooey', :password => '123', :password_confirmation => '123', :email => 'zooey@deschanel.com', :tagline => "I like colors and flowers.", :age => '33', :gender => 'female', :preference => 'men', :city => 'Los Angeles', :state => 'CA', :ethnicity => 'white', :description => "I'm an actress, but not an airhead. I'm a vegan, but won't force you to be one. I like word games.")
 q7 = Question.create( :question_text => 'Which of the following bands is your favorite?')
 a20 = Answer.create(:answer_text => 'She & Him', :is_correct => 't')
 a21 = Answer.create(:answer_text => 'Arcade Fire', :is_correct => 'f')

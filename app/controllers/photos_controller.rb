@@ -19,7 +19,7 @@ class PhotosController < ApplicationController
   def primary
     old = Photo.where(:is_primary => true).first
     if old
-      old.is_primary = false
+      old.is_primary = nil
       old.save
     end
 

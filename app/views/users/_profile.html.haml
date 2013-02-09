@@ -1,23 +1,35 @@
 .profile
-  .profile_main-photo
-  .profile_main-details
-    .profile_username
-      = profile.username
-    .profile_tagline
-      = profile.tagline
-  .profile_details
-    %span(class="line_head") Details:
-    = profile.gender
-    = profile.age
-    = profile.ethnicity
-  .profile_location
-    %span(class="line_head") Location:
-    = profile.city
-    = profile.state
-  .profile_description
-    %span(class="line_head") About:
-    = profile.description
-  .profile_photos
-    = link_to "Photos", photos_path, :class => "button"
+  .profile_main.twelve.columns
+    .profile_main-photos.six.columns
+      .profile_photos-primary
+        = link_to image_tag(profile.photos.where(:is_primary => 'true').first.filename.url), photo_path(profile.photos.where(:is_primary => 'true').first.id) if profile.photos.present?
+      .profile_photos-thumbs
+        = render :partial => 'photos/photo-thumbs', :collection => profile.photos.where(:is_primary => nil), :as => :photo
+    .profile_main-details.six.columns
+      .profile_username
+        = profile.username
+      .profile_tagline
+        = profile.tagline
+      .profile_detail_row
+        %span(class="profile_linehead") Interested in:
+        = profile.age
+      .profile_detail_row
+        %span(class="profile_linehead") Gender:
+        = profile.gender.titlecase
+      .profile_detail_row
+        %span(class="profile_linehead") Age:
+        = profile.age
+      .profile_detail_row
+        %span(class="profile_linehead") Ethnicity:
+        = profile.ethnicity.titlecase
+      .profile_detail_row
+        %span(class="profile_linehead") Location:
+        = profile.city
+        = profile.state
+      .profile_detail_row
+        %span(class="profile_linehead") About:
+        = profile.description
+  .clear
+
   .profile_questions
     = link_to "Questions", questions_path, :class => "button"

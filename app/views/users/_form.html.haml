@@ -14,6 +14,12 @@
     = f.radio_button(:gender, 'female')
     = label_tag(:gender_label, 'Female')
 
+  / .field
+  /   = f.radio_button(:preference, 'men')
+  /   = label_tag(:preference_label, 'Men')
+  /   = f.radio_button(:preference, 'women')
+  /   = label_tag(:preference_label, 'Women')
+
   .field
     = label_tag :age
     = f.number_field :age

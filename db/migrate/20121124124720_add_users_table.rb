@@ -7,6 +7,7 @@ class AddUsersTable < ActiveRecord::Migration
       t.string :tagline
       t.integer :age
       t.string :gender
+      t.string :preference
       t.string :city
       t.string :state
       t.string :ethnicity

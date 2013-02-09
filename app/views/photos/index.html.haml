@@ -2,3 +2,6 @@
   Photos
 .photos
   = render :partial => 'photo-thumbs', :collection => @auth.photos, :as => :photo
+
+.clear
+= link_to "Add Photo", photos_new_path, :class => "button"

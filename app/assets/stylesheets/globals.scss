@@ -3,14 +3,14 @@
 /*---- Main ----*/
 body {  font-family: $logo-sans; background-color: $bg-color; }
 #top-bar { width: 100%; height: 10px; background-color: $topbar; }
-#container { width: 920px; margin: 0 auto; }
+#container { width: 1080px; margin: 0 auto; }
 #logo-login { margin-top: 20px;}
 .upper-bar { text-align: right; font-size: 20px; margin-top: 30px; }
 .upper-bar a, #greeting { margin-left: 10px; }
 
 /*---- Logo ----*/
-#logo { font-family: $logo-font1; font-size: 60px; letter-spacing: -3px; text-align: center; color: $logo1; }
-#str { font-family: $logo-font2; font-size: 119%; margin-left: 3px; letter-spacing: 0; color: $logo2; }
+#logo { font-family: $logo-font1; font-size: 60px; letter-spacing: -3px; text-align: center; color: $primary-dark; }
+#str { font-family: $logo-font2; font-size: 119%; margin-left: 3px; letter-spacing: 0; color: $primary-light; }
 
 /*---- Nav -----*/
 nav { font-size: 20px; font-weight: bold;}
@@ -20,4 +20,18 @@ nav { font-size: 20px; font-weight: bold;}
 .page_title a { font-weight: 400; font-size:60%; }
 
 /*---- Profiles ---*/
-.line_head { font-weight: 700; }
+.profile_main {  }
+  .profile_main-photos { float: left; }
+    .profile_photos-primary { margin-bottom: 10px; }
+    .profile_photos-thumbs { }
+      .profile_photos-thumbs img { float: left; height: 60px; }
+  .profile_main-details { float: left; padding: 0 10px 0 15px; }
+    .profile_username { font-weight: 700; font-size: 50px; color: $primary-dark; margin: 0 0 10px 0; }
+    .profile_tagline { width: 100%; color: $primary-light; border-top: solid 3px $neutral; border-bottom: solid 3px $neutral; font-size: 20px; padding: 5px; font-weight: 700;   }
+    .profile_detail_row { font-size: 20px; margin: 10px 0; line-height: 1.1em; }
+    .profile_linehead { font-weight: 700; color: white; padding: 2px 4px; font-size: 72%; background-color: $neutral; }
+.profile_questions { }
+
+
+/*---- Photos ----*/
+.photo-thumbs { float: left; margin: 0 10px 0 0; }
