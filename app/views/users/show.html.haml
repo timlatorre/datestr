@@ -1,6 +1,8 @@
-.page_title
-  Profile
-  = link_to 'Edit', profile_edit_path(@profile) if @auth = @profile
+.row
+  .twelve.columns
+    .page_title
+      Profile
+      = link_to 'Edit', profile_edit_path(@profile) if @auth = @profile
 
 = link_to 'Contact', new_message_path(@profile) if @auth != @profile
 
